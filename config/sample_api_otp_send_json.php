@@ -1,8 +1,8 @@
 <?php
 ob_start();
 // setting 
-$apikey      = '9be02af971972e5419966abeaf5afb3d'; // api key 
-$urlserver   = 'http://45.76.156.114/sms/api_sms_otp_send_json.php'; // url server sms 
+$apikey      = ''; // api key, you can get from adsmedia.com
+$urlserver   = ''; // url server sms, you can get from adsmedia.com
 $callbackurl = ''; // url callback get status sms 
 $senderid    = '0'; // Option senderid 0=Sms Long Number / 1=Sms Masking/Custome Senderid
 
@@ -59,11 +59,6 @@ if ($curl_errno > 0) {
 		$respon= json_encode($senddatax);	
 	}
 }	
-echo "
-<script language='javascript'>
-	alert('OTP code send to ".$number."');
-</script>
-";	
 header("location:../form-otp.php");
 //header('Content-Type: application/json');
 //echo $respon;
